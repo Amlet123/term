@@ -1,9 +1,10 @@
 PYTHON ?= python3
+ARGS ?=
 
 .PHONY: run test lint
 
 run:
-	$(PYTHON) src/terminalus.py
+	$(PYTHON) src/terminalus.py $(ARGS)
 
 test:
 	$(PYTHON) -m unittest discover -s tests -t . -v

@@ -1,0 +1,25 @@
+# Этап 3: команды этапов 1 и 2 и работа с VFS
+# Запуск: --vfs vfs_samples/deep_tree.xml (или другой файл VFS)
+# Папку для сохранения задаёт переменная окружения EMU_OUT_DIR
+
+# Команды-заглушки и их аргументы
+ls
+ls -l /
+cd /
+cd ..
+
+# vfs-save: сохранение VFS из памяти (путь в кавычках из-за пробелов)
+vfs-save "$EMU_OUT_DIR/saved.xml"
+
+# vfs-save: ошибки
+vfs-save
+vfs-save first.xml second.xml
+vfs-save "$EMU_OUT_DIR/no_such_dir/saved.xml"
+
+# Прочие ошибки
+foo
+cd one two
+exit now
+
+# Завершение работы
+exit
