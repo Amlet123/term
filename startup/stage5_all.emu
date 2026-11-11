@@ -1,0 +1,44 @@
+# Этап 5: rmdir и изменение VFS в памяти
+# Запуск: --vfs vfs_samples/rmdir_demo.xml
+# Папку для сохранения задаёт переменная окружения EMU_OUT_DIR
+
+# исходное состояние VFS
+find
+
+# rmdir: один каталог и несколько каталогов за раз
+rmdir empty_one
+rmdir empty_two empty_three
+ls
+
+# rmdir -v: сообщение о каждом удалённом каталоге
+rmdir -v keep/inner
+
+# rmdir -p: удаляет каталог и его опустевших родителей
+rmdir -p -v chain/level1/level2
+ls
+
+# rmdir с относительным путём из другого каталога
+cd keep
+rmdir -v ../empty_four
+cd /
+
+# изменения живут только в памяти, пока их не сохранит vfs-save
+find
+vfs-save "$EMU_OUT_DIR/after_rmdir.xml"
+
+# ошибки rmdir
+rmdir
+rmdir -x keep
+rmdir nope
+rmdir note.txt
+rmdir not_empty
+rmdir keep
+rmdir /
+cd keep
+rmdir .
+rmdir /keep
+cd /
+
+# после ошибок состояние VFS не изменилось
+find
+exit

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs>
+  <dir name="empty_one"/>
+  <dir name="empty_two"/>
+  <dir name="empty_three"/>
+  <dir name="empty_four"/>
+  <dir name="chain">
+    <dir name="level1">
+      <dir name="level2"/>
+    </dir>
+  </dir>
+  <dir name="keep">
+    <dir name="inner"/>
+    <file name="data.txt">keep me</file>
+  </dir>
+  <dir name="not_empty">
+    <file name="a.txt">a</file>
+  </dir>
+  <file name="note.txt">a file, not a directory</file>
+</vfs>

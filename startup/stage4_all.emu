@@ -1,0 +1,60 @@
+# Этап 4: ls, cd, clear, history, find и работа с VFS
+# Запуск: --vfs vfs_samples/deep_tree.xml
+
+# ls: без аргументов, с путём, с -l, с несколькими путями, с файлом
+ls
+ls /home/user
+ls -l /home/user
+ls /etc /var
+ls /etc/hosts
+ls -l /etc/hosts
+
+# cd: абсолютный и относительный путь, .. и переход без аргументов
+cd /home/user/documents
+ls
+cd work
+ls -l
+cd ../..
+ls
+cd
+cd /home/user/documents/../pictures
+ls
+
+# find: без аргументов, с путём, по имени, по типу, вместе
+cd /home
+find
+find /home/user -name "*.txt"
+find /home -type d
+find /home/user/documents -type f -name "*o*"
+find -name "a*"
+
+# пустой каталог: ls ничего не выводит
+cd /tmp
+ls
+cd /
+
+# ошибки ls, cd, find, history, clear
+ls /nope
+ls -x
+cd /nope
+cd /etc/hosts
+cd one two
+find /nope
+find / -name
+find / -type x
+find a b
+find / -depth
+history x
+history -5
+history 1 2
+clear now
+foo
+
+# history: последние N команд, вся история, очистка
+history 5
+history -c
+history
+
+# clear очищает экран, поэтому стоит последним перед выходом
+clear
+exit
