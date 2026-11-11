@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs>
+  <dir name="home">
+    <dir name="user">
+      <dir name="documents">
+        <dir name="work">
+          <file name="report.txt">Quarterly report</file>
+          <file name="budget.txt">Budget draft</file>
+        </dir>
+        <file name="notes.txt">Remember the milk</file>
+      </dir>
+      <dir name="pictures">
+        <file name="photo.bin" encoding="base64">/9j/4AAQSkZJRgAB</file>
+      </dir>
+      <file name="todo.txt">1. Write tests&#10;2. Submit work</file>
+    </dir>
+    <dir name="guest">
+      <file name="readme.txt">Welcome, guest</file>
+    </dir>
+  </dir>
+  <dir name="etc">
+    <file name="hosts">127.0.0.1 localhost</file>
+    <dir name="config">
+      <file name="app.conf">debug=false</file>
+    </dir>
+  </dir>
+  <dir name="var">
+    <dir name="log">
+      <file name="system.log">boot ok</file>
+    </dir>
+  </dir>
+  <dir name="tmp"/>
+</vfs>

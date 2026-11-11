@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vfs>
+  <file name="notes.txt">First note</file>
+  <file name="todo.txt">Buy bread</file>
+  <file name="config.ini">[main]&#10;mode=test</file>
+  <file name="logo.bin" encoding="base64">iVBORw0KGgo=</file>
+  <file name="привет.txt">Привет, мир!</file>
+  <file name="empty.txt"/>
+</vfs>
